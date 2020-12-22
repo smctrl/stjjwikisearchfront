@@ -6,7 +6,6 @@
 TESTS-*.xml
 
 **/node_modules
-**/dist
 /build
 .vscode/*
 !.vscode/settings.json
