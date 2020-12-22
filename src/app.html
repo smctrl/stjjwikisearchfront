@@ -1,5 +1,14 @@
 <template>
+  <require from="./result-table/result-table"></require>
   <h1>${message}</h1>
-  <button click.trigger="doSearch()">検索</button>
-  ${result}
+  <textarea cols="100" rows="50" value.bind="query"></textarea>
+  nedbのクエリが飛ばせます。<br>
+  cardNameにはカード名、<br>
+  cardTypeには"Object"か"Personnel"か"Tale"か"Incident"か"Canon"、<br>
+  objectClassにはよくご存知のやつ、<br>
+  effectには効果、<br>
+  tagsには配列でタグ名が入っています。<br>
+  JSONパースの失敗とかエラー系はコンソールで確認してください。<br>
+  <button click.trigger="doSearch()">検索</button><br>
+  <result-table cards.bind="cards"></result-table>
 </template>

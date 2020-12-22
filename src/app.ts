@@ -1,15 +1,11 @@
 import { search } from "api-service";
+import { Card } from "card";
 export class App {
-  public message: string = 'Hello World!2';
+  public message: string = 'Hello World!3';
   public result : string = "";
+  public cards: Card[] = [];
+  public query: string = "";
   public doSearch() {
-    const query = {
-      cardType: "Object",
-      $or : [
-        {objectClass:"Neutralized"},
-        {objectClass:"Explained"},
-      ]
-    }
-    search(query).then(json => {console.log("JSON到着");this.result = JSON.stringify(json)});
+    search(JSON.parse(this.query)).then(json => {console.log("JSON到着");this.cards = json}).catch(reason => this.message = JSON.stringify(reason));
   }
 }

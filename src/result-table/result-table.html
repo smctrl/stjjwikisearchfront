@@ -1,0 +1,19 @@
+<template>
+  <require from="./object-card-row/object-card-row"></require>
+  <require from="./personnel-card-row/personnel-card-row"></require>
+  <require from="./tale-card-row/tale-card-row"></require>
+  <require from="./incident-card-row/incident-card-row"></require>
+  <require from="./canon-card-row/canon-card-row"></require>
+  <section>
+    <h2>検索結果</h2>
+    <div repeat.for="singleCard of cards">
+      <object-card-row card.bind="singleCard" if.bind="singleCard.cardType=='Object'"></object-card-row>
+      <personnel-card-row card.bind="singleCard" if.bind="singleCard.cardType=='Personnel'"></personnel-card-row>
+      <tale-card-row card.bind="singleCard" if.bind="singleCard.cardType=='Tale'"></tale-card-row>
+      <incident-card-row card.bind="singleCard" if.bind="singleCard.cardType=='Incident'"></incident-card-row>
+      <canon-card-row card.bind="singleCard" if.bind="singleCard.cardType=='Canon'"></canon-card-row>
+      <br>
+      <br>
+    </div>
+  </section>
+</template>
