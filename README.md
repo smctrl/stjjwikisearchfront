@@ -19,3 +19,8 @@ To enable hot module reload, do `au run --hmr`.
 ## Build for production
 
 Run `au build --env prod`.
+
+## デプロイのためにやること
+`npm run build`  
+向こうにpush  
+反映を待つ  
