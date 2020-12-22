@@ -1,7 +1,7 @@
 import { search } from "api-service";
 import { Card } from "card";
 export class App {
-  public message: string = 'Hello World!4';
+  public message: string = 'Hello World!5';
   public result : string = "";
   public cards: Card[] = [];
   public query: string = "";
