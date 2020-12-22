@@ -10,6 +10,6 @@ export class App {
         {objectClass:"Explained"},
       ]
     }
-    search(query).then(json => this.result = JSON.stringify(json));
+    search(query).then(json => {console.log("JSON到着");this.result = JSON.stringify(json)});
   }
 }
