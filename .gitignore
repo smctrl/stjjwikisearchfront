@@ -1,0 +1,17 @@
+*.iml
+.idea
+.DS_STORE
+.rpt2_cache
+.eslintcache
+TESTS-*.xml
+
+**/node_modules
+**/dist
+/build
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
